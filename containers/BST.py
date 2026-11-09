@@ -1,5 +1,5 @@
 '''
-This file implements the Binary Search Tree data structure.
+This file implements the Binary Search ree data structure.
 The functions in this file are considerably harder than the functions in the BinaryTree file.
 '''
 
@@ -54,6 +54,10 @@ class BST(BinaryTree):
         Convert the contents of both trees into a sorted list,
         then compare those sorted lists for equality.
         '''
+        return sorted(self) == sorted(t2)
+
+    def __iter__(self):
+        return iter(self.to_list('inorder'))
 
     def is_bst_satisfied(self):
         '''
